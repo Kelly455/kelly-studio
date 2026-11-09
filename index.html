@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KELLY.DEV | Websites for Local Businesses</title>
+  <meta name="description" content="Fast, modern websites for local businesses. Booking forms, clean design, live in days.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>">
+  <link rel="preload" as="image" href="media/poster.jpg" fetchpriority="high">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t !== 'light' && t !== 'dark') { t = 'light'; }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="top">
+
+  <header class="nav-wrap">
+    <nav class="nav glass">
+      <a href="#top" class="logo">KELLY.DEV</a>
+      <ul class="nav-links">
+        <li><a href="#services">Work</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode">
+        <span class="icon-sun" aria-hidden="true">☀</span>
+        <span class="icon-moon" aria-hidden="true">☾</span>
+      </button>
+      <a href="#contact" class="btn btn-solid">Start a project</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline poster="media/poster.jpg" aria-hidden="true">
+        <source src="media/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Web developer for local businesses</p>
+        <h1>Websites that bring customers through the door.</h1>
+        <p class="lede">Fast, mobile-first sites with working booking and contact forms. Built from scratch, live in days.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-solid">Start a project</a>
+          <a href="#services" class="btn btn-glass">See my work</a>
+        </div>
+      </div>
+      <button type="button" class="video-toggle glass" id="videoToggle" aria-label="Pause background video">Pause</button>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-head">
+        <p class="eyebrow">What I build</p>
+        <h2>Pick a service. See the proof.</h2>
+      </div>
+      <div class="panels" id="panels">
+
+        <article class="panel glass is-open">
+          <button type="button" class="panel-head" aria-expanded="true" aria-controls="panel-1">
+            <span class="panel-title">Booking and order sites</span>
+            <span class="panel-sub">Forms that deliver to your inbox</span>
+          </button>
+          <div class="panel-body" id="panel-1">
+            <div class="mini-grid">
+              <a class="mini" href="https://kelly455.github.io/sunday-crust/" target="_blank" rel="noopener">
+                <img class="mini-img" src="media/sunday-crust.jpg" alt="Screenshot of the Sunday Crust bakery website" width="800" height="500" loading="lazy">
+                <strong>Sunday Crust</strong>
+                <small>Bakery · Order form</small>
+              </a>
+              <a class="mini" href="https://kelly455.github.io/fade-theory/" target="_blank" rel="noopener">
+                <img class="mini-img" src="media/fade-theory.jpg" alt="Screenshot of the Fade Theory barbershop website" width="800" height="500" loading="lazy">
+                <strong>Fade Theory</strong>
+                <small>Barbershop · Booking</small>
+              </a>
+            </div>
+            <a href="#contact" class="panel-cta">Start this project →</a>
+          </div>
+        </article>
+
+        <article class="panel glass">
+          <button type="button" class="panel-head" aria-expanded="false" aria-controls="panel-2">
+            <span class="panel-title">Property sites and web apps</span>
+            <span class="panel-sub">Listings, profiles, interactive tools</span>
+          </button>
+          <div class="panel-body" id="panel-2">
+            <div class="mini-grid">
+              <a class="mini" href="https://kelly455.github.io/Northline-Property-Group/" target="_blank" rel="noopener">
+                <img class="mini-img" src="media/northline.jpg" alt="Screenshot of the Northline Property Group website" width="800" height="500" loading="lazy">
+                <strong>Northline</strong>
+                <small>Real estate · Listings</small>
+              </a>
+              <a class="mini" href="QUIZ_URL" target="_blank" rel="noopener">
+                <img class="mini-img" src="media/quiz-app.jpg" alt="Screenshot of the Quiz App" width="800" height="500" loading="lazy">
+                <strong>Quiz App</strong>
+                <small>JavaScript · Interactive app</small>
+              </a>
+            </div>
+            <a href="#contact" class="panel-cta">Start this project →</a>
+          </div>
+        </article>
+
+        <article class="panel glass">
+          <button type="button" class="panel-head" aria-expanded="false" aria-controls="panel-3">
+            <span class="panel-title">Speed you can verify</span>
+            <span class="panel-sub">Lighthouse scores on live sites</span>
+          </button>
+          <div class="panel-body" id="panel-3">
+            <ul class="stat-list">
+              <li><strong>Sunday Crust</strong><span>97 · 100 · 100 · 100</span></li>
+              <li><strong>Fade Theory</strong><span>98 · 100 · 100 · 100</span></li>
+            </ul>
+            <p class="stat-note">Mobile Lighthouse: Performance · Accessibility · Best Practices · SEO</p>
+            <a href="#contact" class="panel-cta">Start this project →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Process</p>
+        <h2>From message to live site.</h2>
+      </div>
+      <ol class="steps">
+        <li class="card glass"><span class="step-num">01</span><h3>Brief</h3><p>You tell me what the site must do. I write it down as a short scope.</p></li>
+        <li class="card glass"><span class="step-num">02</span><h3>Build</h3><p>I build it mobile-first, in plain HTML, CSS and JavaScript.</p></li>
+        <li class="card glass"><span class="step-num">03</span><h3>Review</h3><p>You review the live preview and request changes.</p></li>
+        <li class="card glass"><span class="step-num">04</span><h3>Launch</h3><p>I deploy it, test every form, and hand over the files.</p></li>
+      </ol>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Contact</p>
+        <h2>Tell me about your project.</h2>
+      </div>
+      <form id="contactForm" class="contact-form glass" action="https://formspree.io/f/xkjjlnno" method="POST" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+
+        <label for="message">What do you need?</label>
+        <textarea id="message" name="message" rows="5" placeholder="At least 10 characters" required></textarea>
+
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+        <input type="hidden" name="_subject" value="New project inquiry">
+
+        <p class="form-error" id="formError" role="alert" hidden></p>
+        <button type="submit" class="btn btn-solid" id="submitBtn">Send message</button>
+        <p class="form-success" id="formSuccess" role="status" hidden></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 KELLY.DEV. Built with plain HTML, CSS and JavaScript.</p>
+  </footer>
+
+</body>
+</html>
