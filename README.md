@@ -13,5 +13,5 @@ Portfolio and service site for a freelance web developer. Built with plain HTML,
 - Mobile-first layout
 
 ## Credits
-- Hero video: REPLACE with the creator's name on Pexels.
+- Hero video: Tima Miroshnichenko on Pexels.
 - Form delivery: Formspree.
