@@ -706,3 +706,76 @@ textarea:focus-visible {
     height: 28rem;
   }
 }
+
+/* ---------- NAV: SLIDING HOVER PILL (CSS anchor positioning) ---------- */
+@media (hover: hover) and (min-width: 800px) {
+  @supports (anchor-name: --nav-hover) {
+
+    .nav-links {
+      position: relative;
+      isolation: isolate;
+      gap: 0;
+      anchor-name: --nav-hover;
+    }
+
+    .nav-links li:hover {
+      anchor-name: --nav-hover;
+    }
+
+    .nav-links a {
+      display: block;
+      padding: 0.55rem 1.1rem;
+      border-radius: 999px;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    /* Resting state: invisible, a thin sliver at the bottom of the link row */
+    .nav-links::before {
+      content: "";
+      position: absolute;
+      position-anchor: --nav-hover;
+      z-index: -1;
+      top: calc(anchor(bottom) - 10px);
+      left: calc(anchor(left) + 1rem);
+      right: calc(anchor(right) + 1rem);
+      bottom: calc(anchor(bottom) + 5px);
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--text) 10%, transparent);
+      border: 1px solid var(--line);
+      opacity: 0;
+      transition: all 500ms linear(
+        0,
+        0.029 1.6%,
+        0.123 3.5%,
+        0.651 10.6%,
+        0.862 14.1%,
+        1.002 17.7%,
+        1.046 19.6%,
+        1.074 21.6%,
+        1.087 23.9%,
+        1.086 26.6%,
+        1.014 38.5%,
+        0.994 46.3%,
+        1
+      );
+    }
+
+    /* Hover state: grow to exactly cover the hovered link */
+    .nav-links:has(a:hover)::before {
+      top: anchor(top);
+      left: anchor(left);
+      right: anchor(right);
+      bottom: anchor(bottom);
+      opacity: 1;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-links::before {
+    transition: none;
+  }
+}
